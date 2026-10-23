@@ -1,0 +1,11 @@
+# The model is mounted into the container by docker-compose.yml.
+models/
+
+# Keep local tooling and generated files out of the build context.
+.git/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/

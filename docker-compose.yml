@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  phi-api:
+    build: .
+    container_name: phi_35_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/models
+    environment:
+      - MODEL_PATH=/models/phi-3.5-mini-instruct-q4_k_m.gguf
+    restart: unless-stopped
